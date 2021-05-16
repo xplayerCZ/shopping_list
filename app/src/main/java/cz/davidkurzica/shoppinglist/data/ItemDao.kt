@@ -1,9 +1,10 @@
-package cz.davidkurzica.shoppinglist
+package cz.davidkurzica.shoppinglist.data
 
 import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
+import cz.davidkurzica.shoppinglist.data.Item
 
 @Dao
 interface ItemDao {
@@ -17,7 +18,7 @@ interface ItemDao {
     fun findByName(name: String): Item
 
     @Insert
-    fun insertAll(vararg users: Item)
+    fun insertAll(vararg items: Item)
 
     @Delete
     fun delete(item: Item)
